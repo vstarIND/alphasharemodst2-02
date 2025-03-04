@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download This Mod to Get 1345+ FPS in Minecraft [New] (by 1Alpha1)</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            transition: background 0.3s, color 0.3s;
+        }
+        .dark-mode {
+            background: #222;
+            color: white;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(90deg, #333, #444);
+            color: white;
+            padding: 20px 40px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .brand {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .nav-bar {
+            display: flex;
+            gap: 25px;
+        }
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .nav-bar a:hover {
+            background: #ffcc00;
+            color: black;
+        }
+        .dark-mode-toggle {
+            background: #ffcc00;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .dark-mode-toggle:hover {
+            background: #ffaa00;
+        }
+        .blog-container {
+            max-width: 800px;
+            margin: 120px auto;
+            padding: 30px;
+            background-color: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .dark-mode .blog-container {
+            background: #333;
+        }
+        .blog-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .blog-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .blog-content {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .ad-box {
+            width: 100%;
+            margin: 20px 0;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        .ad-box img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .ad-box1 {
+            width: 100%;
+            margin: 20px 0;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        .ad-box1 img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .ad-label {
+            font-weight: bold;
+            margin-top: 10px;
+            color: #333;
+        }
+        .author-footer {
+            text-align: center;
+            background: #222;
+            color: white;
+            padding: 20px 0;
+            font-size: 16px;
+            font-weight: bold;
+            border-top: 3px solid #ffcc00;
+        }
+        .footer-container {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 16px;
+            border-top: 3px solid #ffcc00;
+        }
+        .footer-container a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .footer-container a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .blog-container {
+                padding: 20px;
+                text-align: center;
+            }
+            
+        }
+        
+
+        .timer {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #ff5722;
+            color: white;
+            font-size: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Download Button */
+        .download-container {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .download-btn {
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #218838;
+        }
+
+        /* Design 2: Gradient Button with Shadow */
+.ad-button {
+    padding: 16px 32px;
+    background: linear-gradient(135deg, #ff6f61, #ff3a2b);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.ad-button:hover {
+    background: linear-gradient(135deg, #ff3a2b, #ff6f61);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.ad-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.ad-label {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+    </style>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+            localStorage.setItem("dark-mode", document.body.classList.contains("dark-mode"));
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            if (localStorage.getItem("dark-mode") === "true") {
+                document.body.classList.add("dark-mode");
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="brand">Alpha Writes ✏️</div>
+        <div class="nav-bar">
+            <a href="https://alpha.programervedant.fun">Home</a>
+            <a href="https://alpha.programervedant.fun">About</a>
+            <a href="#">Blog</a>
+        </div>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">Dark/Light Mode</button>
+    </div>
+
+    
+
+    <div class="blog-container">
+
+        <h1>Download Mods [Step - 2/3]</h1>
+
+    <div class="timer-container" id="timer-box">
+        <div class="timer" id="timer">10</div>
+    </div>
+
+    <div class="download-container" id="download-container">
+        <button class="download-btn" onclick="location.href='#ad-box1'">
+            Download Mods
+        </button>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+        <h1 class="blog-title">Download This Mod to Get 1345+ FPS in Minecraft (by 1Alpha1)</h1>
+        <!-- <img src="blog-img.png" alt="Blog Image" class="blog-image"> -->
+        <div class="blog-content">
+            <p>Are you tired of lag and low FPS in Minecraft? Get a massive FPS boost with this must-have mod! With proper optimization, you can achieve 200+ FPS for a smooth and lag-free gaming experience.</p>
+            <p></p>
+        </div>
+
+        
+
+        <h2>Best FPS-Boosting Mod</h2>
+        <div class="blog-content">
+            <h3>Mod Folder Download</h3>
+        <p>To make it easy for you, we have compiled all the necessary FPS-boosting mods into one folder. Simply download it from the link below and install it for a better gaming experience!</p> </div>
+
+<br>
+
+
+<br>
+<br>
+
+
+        <h1></h1>
+        <h2>How to Install</h2>
+        <div class="blog-content">
+        <p>1. Download and install Fabric Loader or Forge.
+
+            2. Extract the downloaded mod folder.
+            
+            3. Place the mods inside your .minecraft/mods folder.
+            
+            4. Launch Minecraft and enjoy the FPS boost!
+            
+            5. Download the mod now and experience Minecraft like never before! 🚀</p> </div>
+
+        <br>     
+
+<br>
+
+<!-- Advertisement Box 1 with clickable button -->
+<div id="ad-box1" class="ad-box1">
+    <a href="https://alphasharemodst3-02-1.programervedant.fun" target="_blank">
+        <button class="ad-button"> Fabulously Optimized
+        </button>
+    </a>
+    <div class="ad-label">Click the button to download!</div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+
+<!-- Advertisement Box 1 with clickable button -->
+<div id="ad-box1" class="ad-box1">
+    <a href="https://alphasharemodst3-02-2.programervedant.fun" target="_blank">
+        <button class="ad-button"> Simply Optimized</button>
+    </a>
+    <div class="ad-label">Click the button to download!</div>
+</div> 
+
+<br>
+<br>
+<br>
+<br>
+
+
+<!-- Advertisement Box 1 with clickable button -->
+<div id="ad-box1" class="ad-box1">
+    <a href="https://alphasharemodst3-02-3.programervedant.fun" target="_blank">
+        <button class="ad-button"> Sodium Plus</button>
+    </a>
+    <div class="ad-label">Click the button to download!</div>
+</div>
+
+   
+
+
+   <!-- <div class="ad-box">
+        <a href="https://www.youtube.com/watch?v=vGkU_QNf9Sk&t=104s" target="_blank">
+            <img src="ad1.jpg" alt="Advertisement">
+        </a>
+        <div class="ad-label">Click to watch Latest Video Now !</div>
+    </div> -->
+
+        <div class="author-footer">
+            <p> 👁️ 0 Views </p>
+                <br>
+               <p> Written by 1Alpha1 | Date of Publishing : 27-02-2025</p>
+        </div>
+
+
+        <div class="footer-container">
+            <p>Powered By: <a href="https://boldscript.programervedant.fun">BoldScript</a>
+                <br>
+                <br>
+                <br>
+                Developed By: <a href="https://programervedant.fun">ProgramerVedant</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let timeLeft = 10;
+            const timerElement = document.getElementById("timer");
+            const downloadContainer = document.getElementById("download-container");
+
+            function updateTimer() {
+                if (timeLeft > 0) {
+                    timerElement.textContent = timeLeft;
+                    timeLeft--;
+                    setTimeout(updateTimer, 1000);
+                } else {
+                    // Hide Timer & Show Download Button
+                    document.getElementById("timer-box").style.display = "none";
+                    downloadContainer.style.display = "block";
+                }
+            }
+
+            updateTimer();
+        });
+    </script>
+
+</body>
+</html>
